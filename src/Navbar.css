@@ -1,0 +1,79 @@
+.navbar {
+  display: flex;
+  flex-direction: column; /* Stack items vertically */
+  align-items: center; /* Center-align children */
+  background-color: #a2bbc6;
+  color: #040315;
+  padding: 10px 20px;
+}
+
+.navbar img.logo {
+  height: 250px;
+  margin-bottom: 20px; /* Add space between logo and links */
+}
+
+.navbar .links {
+  display: flex;
+  justify-content: center; /* Center the links horizontally */
+  width: 100%; /* Ensure the links container takes up full width */
+}
+  
+  /* Common styles for both links and the dropdown button */
+  .navbar .links a, .navbar .dropbtn {
+    color: #040315;
+    padding: 0 15px;
+    text-decoration: none;
+    cursor: pointer;
+    font-family: Arial, sans-serif; /* Specify the font-family you prefer */
+    font-size: 20px; /* Adjust the font-size as needed */
+    line-height: 50px; /* Adjust line-height for vertical alignment and spacing */
+    background-color: transparent; /* Ensure the background matches */
+    border: none; /* Remove borders from buttons */
+    outline: none; /* Remove focus outline from buttons */
+  }
+  
+  /* Additional styles to ensure uniform appearance and behavior */
+  .navbar .links a:hover, .navbar .dropbtn:hover {
+    text-decoration: underline;
+    background-color: #f15d07d3;
+    color: #000000;
+  }
+
+  .navbar .dropdown-content a:hover {
+    text-decoration: underline;
+    background-color: #ffffffaa
+  }
+  
+  /* Ensure the dropdown content matches the theme */
+  .dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: #ed6a1e; 
+    min-width: 160px; /* Adjust width as necessary */
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+    z-index: 1;
+    
+  }
+  
+  .dropdown-content a {
+    color: black; /* Change if different from default */
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block;
+  }
+  .dropdown-content a:hover {
+    background-color: #ecdada9f; 
+    color: #000000;
+  }
+  /* Show the dropdown content on hover */
+  .dropdown:hover .dropdown-content {
+    display: block;
+  }
+  
+  
+  .dropbtn {
+    background-color: #333; /* Match navbar color */
+    border: none;
+    color: white; /* Match navbar link color */
+  }
+  

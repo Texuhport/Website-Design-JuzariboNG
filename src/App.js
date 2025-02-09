@@ -1,25 +1,23 @@
-import logo from './logo.svg';
-import './App.css';
+var React = require('react');
+var Router = require('react-router-dom').BrowserRouter;
+var Routes = require('react-router-dom').Routes;
+var Route = require('react-router-dom').Route;
+var Navbar = require('./Navbar');
+var HomePage = require('./HomePage');
+var ContactPage = require('./ContactPage');
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    React.createElement(Router, null,
+      React.createElement("div", {className: "App"},
+        React.createElement(Navbar, null),
+        React.createElement(Routes, null,
+          React.createElement(Route, {path: "/", element: React.createElement(HomePage, null)}),
+          React.createElement(Route, {path: "/contact", element: React.createElement(ContactPage, null)})
+        )
+      )
+    )
   );
 }
 
-export default App;
+module.exports = App;

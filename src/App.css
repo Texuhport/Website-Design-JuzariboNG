@@ -1,7 +1,11 @@
 .App {
   text-align: center;
+  background-color: #cbe7f4ca;
 }
-
+h1, h2 {
+  color: #1A1957;
+  align-items: center;
+}
 .App-logo {
   height: 40vmin;
   pointer-events: none;
@@ -28,6 +32,26 @@
   color: #61dafb;
 }
 
+.TeamMeet{
+  width: 500px; 
+  height: auto; 
+  margin: 40px;
+  align-items: center; 
+}
+.stamp {
+  width: 600px; 
+  height: auto; 
+  margin: 5px; 
+  margin-bottom: 30px;
+
+}
+.network {
+  width: 400px; 
+  height: auto; 
+  margin: 0px; 
+
+}
+
 @keyframes App-logo-spin {
   from {
     transform: rotate(0deg);
@@ -35,4 +59,50 @@
   to {
     transform: rotate(360deg);
   }
+}
+
+
+.grid-container {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr); /* Creates three columns of equal width */
+  grid-gap: 3px; /* Adjust the space between grid items */
+  margin-bottom: 100px; /* Space below the entire grid */
+  
+}
+
+.grid-item {
+  display: flex;
+  flex-direction: column;
+  align-items: center; /* Center-align the content of grid items */
+  
+}
+
+.grid-item img {
+  width: 51% ; /* Adjust based on your preference */
+  height: auto; /* Adjust based on your preference */
+  margin-bottom: 0px; /* Space between the image and the caption */
+  background-color: transparent;
+}
+
+
+.email-button {
+  background-color: #1A1957; 
+  border: none;
+  color: white;
+  padding: 15px 32px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 18px;
+  margin: 4px 2px;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+.email-button:hover {
+  background-color: #ed6a1e;
+}
+
+.email-button:click {
+  background-color: #00c31a; 
 }
